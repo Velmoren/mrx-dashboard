@@ -1,0 +1,53 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Default</mrx-label>
+      <mrx-editor [placeholder]="placeholder"></mrx-editor>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Value not empty</mrx-label>
+      <mrx-editor [ngModel]="htmlValue"></mrx-editor>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Is invalid</mrx-label>
+      <mrx-editor [invalid]="true" [invalidMessage]="'it is error'"></mrx-editor>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Check invalid true</mrx-label>
+      <mrx-editor
+          [invalidMessage]="'it is error'"
+          [checkInvalid]="true"
+      ></mrx-editor>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Check invalid false</mrx-label>
+      <mrx-editor [checkInvalid]="false"></mrx-editor>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Check disabled</mrx-label>
+      <mrx-editor [disabled]="true" [ngModel]="htmlValue"></mrx-editor>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Check disabled</mrx-label>
+      <mrx-editor [readonly]="true" [ngModel]="htmlValue"></mrx-editor>
+    </div>
+  </div>
+</mrx-content-wrapper>

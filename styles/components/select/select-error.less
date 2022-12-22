@@ -1,0 +1,21 @@
+.mrx-input-select.mrx-input-select  {
+  &.mrx-input-error {
+    .ng-select .ng-select-container {
+      border-color: var(--Red);
+    }
+  }
+
+  &.mrx-input-checked-error {
+    .ng-select .ng-select-container {
+      border-color: var(--Red);
+      background-color: var(--Warning);
+    }
+  }
+
+  &.mrx-input-checked-success {
+    .ng-select .ng-select-container {
+      background-color: var(--Good);
+      border: 1px solid #60A772;
+    }
+  }
+}

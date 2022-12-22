@@ -1,0 +1,60 @@
+.mrx-dropdown-item {
+  width: 100%;
+  padding: .25rem 1rem;
+  clear: both;
+  color: #282828;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+
+  &:hover, &:focus {
+    color: #282828;
+    background-color: #EDF5FF;
+  }
+
+  &.active, &:active {
+    color: #282828;
+    text-decoration: none;
+    background-color: #EDF5FF;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  svg {
+    margin-right: 10px;
+
+    path, rect {
+      stroke: #282828;
+    }
+
+    &.negative {
+      path, rect {
+        stroke: var(--Red);
+      }
+    }
+
+    &.positive {
+      path, rect {
+        stroke: var(--Green);
+      }
+    }
+  }
+}
+
+.mrx-dropdown-item:not(:disabled),
+.mrx-dropdown-item[type=button]:not(:disabled),
+.mrx-dropdown-item[type=reset]:not(:disabled),
+.mrx-dropdown-item[type=submit]:not(:disabled) {
+  cursor: pointer;
+}

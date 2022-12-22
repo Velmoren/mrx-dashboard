@@ -1,0 +1,20 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-checkbox type="default" tooltip="tooltip">this is label</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-checkbox [indeterminate]="true" [boldLabel]="true">this is label</mrx-checkbox>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Invalid checkbox</mrx-label>
+      <mrx-checkbox type="default" [invalid]="true">this is label</mrx-checkbox>
+    </div>
+    <div class="col">
+      <mrx-checkbox [indeterminate]="true" [boldLabel]="true">this is label</mrx-checkbox>
+    </div>
+  </div>
+</mrx-content-wrapper>

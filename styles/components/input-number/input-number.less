@@ -1,0 +1,19 @@
+.mrx-input-number.mrx-input-number {
+  width: 100%;
+  position: relative;
+
+  input {
+    border: 1px solid var(--Stroke);
+    width: 100%;
+    outline: none;
+    transition: 0.2s;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px var(--Bg1);
+    }
+
+    &:disabled {
+      background-color: var(--Disabled);
+    }
+  }
+}

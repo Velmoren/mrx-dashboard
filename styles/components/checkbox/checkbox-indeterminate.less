@@ -1,0 +1,35 @@
+.mrx-checkbox.mrx-checkbox {
+  &.mrx-checkbox-indeterminate {
+    .mrx-checkbox__mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--sizing-4);
+      width: var(--sizing-4);
+      min-width: var(--sizing-4);
+      border: var(--border-width-checkbox) solid var(--neutral-bg-stroke-default);
+      border-radius: var(--border-radius-1);
+      transition: 0.2s;
+      position: relative;
+  
+      &:after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 2px;
+        background-color: var(--brand-bg-primary-default);
+        border-radius: var(--border-radius-1);
+      }
+  
+      &:hover {
+        border-color: var(--brand-bg-primary-default);
+      }
+    }
+  
+    &:hover {
+      .mrx-checkbox__mark {
+        border-color: var(--Main2);
+      }
+    }
+  }
+}

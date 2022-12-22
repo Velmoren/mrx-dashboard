@@ -1,0 +1,24 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+    <div class="row mb-3">
+      <div class="col">
+        <mrx-input-select></mrx-input-select>
+      </div>
+      <div class="col">
+        <mrx-input-select [items]="selectItems"></mrx-input-select>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <mrx-input-select [items]="selectItems"></mrx-input-select>
+      </div>
+      <div class="col">
+        <mrx-input-select
+            [multiple]="true"
+            [ngModel]="selected"
+            (ngModelChange)="changeValue($event)"
+            [items]="selectItems"
+        ></mrx-input-select>
+      </div>
+    </div>
+</mrx-content-wrapper>

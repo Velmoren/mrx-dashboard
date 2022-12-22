@@ -1,0 +1,33 @@
+<div class="page-wrapper" [class]="getClasses">
+  <div class="container pt-5">
+    <mrx-content-wrapper type="colored">
+      <div class="row">
+        <div class="col">
+          <mrx-label>Выбор тенанта</mrx-label>
+          <div class="radio-variant mb-2" *ngFor="let tenant of tenants">
+            <mrx-radio
+                [(ngModel)]="valueTenants"
+                [name]="'tenants'"
+                [value]="tenant.value"
+                [label]="tenant.label"
+            ></mrx-radio>
+          </div>
+        </div>
+
+        <div class="col">
+          <mrx-label>Выбор семейства шрифтов</mrx-label>
+          <div class="radio-variant mb-2" *ngFor="let font of fonts">
+            <mrx-radio
+                [(ngModel)]="valueFonts"
+                [name]="'fonts'"
+                [value]="font.value"
+                [label]="font.label"
+            ></mrx-radio>
+          </div>
+        </div>
+      </div>
+    </mrx-content-wrapper>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

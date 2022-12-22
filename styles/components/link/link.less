@@ -1,0 +1,39 @@
+.mrx-link.mrx-link {
+  display: inline;
+  position: relative;
+
+  &.mrx-link-colored {
+    &.mrx-link-default {
+      color: var(--system-text-link-default);
+
+      &:hover {
+        border-bottom: var(--border-width-default) solid var(--system-text-link-default);
+      }
+
+      &:visited {
+        color: var(--system-text-link-visited);
+
+        &:hover {
+          border-bottom: var(--border-width-default) solid var(--system-text-link-visited);
+        }
+      }
+    }
+
+    &.mrx-link-navigational {
+      color: var(--brand-text-nav-link);
+
+      &:hover {
+        border-bottom: var(--border-width-default) solid var(--brand-bg-primary-default);
+      }
+    }
+
+    &.mrx-link-pseudo {
+      color: var(--brand-text-nav-link);
+      border-bottom: var(--border-width-default) dashed var(--neutral-bg-stroke-default);
+
+      &:hover {
+        border-bottom: var(--border-width-default) dashed var(--brand-bg-primary-default);
+      }
+    }
+  }
+}
