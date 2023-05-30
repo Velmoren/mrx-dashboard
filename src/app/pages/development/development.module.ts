@@ -27,6 +27,8 @@ import { TabsComponent } from '../../components/tabs/tabs.component';
 import { ProgressComponent } from '../../components/progress/progress.component';
 import { StepperComponent } from '../../components/stepper/stepper.component';
 import { RadioComponent } from '../../components/radio/radio.component';
+import { MfDatetimeComponent } from "../../components/myrtex-mf-ui/mf-datetime/mf-datetime.component";
+import { DateFormatModule, InputDateTimeModule } from "myrtex-mf-ui";
 
 
 @NgModule({
@@ -55,12 +57,15 @@ import { RadioComponent } from '../../components/radio/radio.component';
     ProgressComponent,
     StepperComponent,
     RadioComponent,
+    MfDatetimeComponent
   ],
   imports: [
     CommonModule,
     DevelopmentRoutingModule,
     FormsModule,
-    MyrtexLibModule
+    MyrtexLibModule,
+    InputDateTimeModule,
+    DateFormatModule
   ]
 })
 export class DevelopmentModule {}

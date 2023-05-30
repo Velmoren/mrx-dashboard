@@ -1,0 +1,112 @@
+<mrx-content-wrapper type="colored" customClasses="mb-3">
+  <div class="row mb-3"><div class="col"><h3>Форматы вывода времени</h3></div></div>
+  <div class="row mb-5">
+    <div class="col">
+      <mrx-label>Дата в локальном часовом поясе в исходном состоянии в формате ISO</mrx-label>
+      {{ value1 || 'Нет информации' }}
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <mrx-label>Дата в локальном часовом поясе</mrx-label>
+      {{ (value1 | dateTimeFormat) || 'Нет информации' }}
+    </div>
+    <div class="col">
+      <mrx-label>Дата в московском часовом поясе</mrx-label>
+      {{ (value1 | dateTimeFormat: 'mos') || 'Нет информации' }}
+    </div>
+  </div>
+
+  <div class="row mb-3"><div class="col"><h3>Отдельные поля для вывода формата даты выше</h3></div></div>
+  <div class="row mb-5">
+    <div class="col">
+      <mrx-label>Дата в локальном часовом поясе</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value1"
+        (ngModelChange)="changeValue1($event)"
+        [timepicker]="true"
+      ></mrx-input-date-time>
+    </div>
+    <div class="col">
+      <mrx-label>Дата в московском часовом поясе</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value1"
+        (ngModelChange)="changeValue1($event)"
+        timezone="Europe/Moscow"
+        [timepicker]="true"
+      ></mrx-input-date-time>
+    </div>
+  </div>
+
+  <div class="row mb-3"><div class="col"><h3>Поля для даты начала и даты конца + время</h3></div></div>
+  <div class="row mb-5">
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value2"
+        (ngModelChange)="changeValue2($event)"
+        datePlaceholder="дд.мм.гггг чч:мм"
+        [timepicker]="true"
+        [maxDate]="value3"
+      ></mrx-input-date-time>
+    </div>
+    <div class="col">
+      <mrx-label>Дата конца</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value3"
+        (ngModelChange)="changeValue3($event)"
+        datePlaceholder="дд.мм.гггг чч:мм"
+        [minDate]="value2"
+        [timepicker]="true"
+      ></mrx-input-date-time>
+    </div>
+  </div>
+
+  <div class="row mb-3"><div class="col"><h3>Поля для даты начала и даты конца без времени</h3></div></div>
+  <div class="row mb-5">
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value2"
+        (ngModelChange)="changeValue2($event)"
+        datePlaceholder="дд.мм.гггг"
+        [timepicker]="false"
+        [maxDate]="value3"
+      ></mrx-input-date-time>
+    </div>
+    <div class="col">
+      <mrx-label>Дата конца</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value3"
+        (ngModelChange)="changeValue3($event)"
+        datePlaceholder="дд.мм.гггг"
+        [minDate]="value2"
+        [timepicker]="false"
+      ></mrx-input-date-time>
+    </div>
+  </div>
+
+  <div class="row mb-3"><div class="col"><h3>Инлайн календари</h3></div></div>
+  <div class="row">
+    <div class="col">
+      <mrx-label>Дата начала</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value2"
+        (ngModelChange)="changeValue2($event)"
+        [timepicker]="true"
+        [maxDate]="value3"
+        [inline]="true"
+      ></mrx-input-date-time>
+    </div>
+    <div class="col">
+      <mrx-label>Дата конца</mrx-label>
+      <mrx-input-date-time
+        [(ngModel)]="value3"
+        (ngModelChange)="changeValue3($event)"
+        [minDate]="value2"
+        [timepicker]="true"
+        [inline]="true"
+      ></mrx-input-date-time>
+    </div>
+  </div>
+</mrx-content-wrapper>
